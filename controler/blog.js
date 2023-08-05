@@ -2,6 +2,7 @@ const blogSchema = require("../model/blogs");
 
 const CreateBlog = async (req, res, next) => {
   const { title, body } = req.body;
+  console.log("title")
   if (!title || !body) {
     return res.status(404).json({
       error: true,
